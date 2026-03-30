@@ -575,6 +575,110 @@
     }
 
     /* ── WHY US ── */
+    /* ── REVIEWS ── */
+    .reviews-carousel {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .reviews-track-wrap {
+      overflow: hidden;
+      flex: 1;
+    }
+
+    .reviews-track {
+      display: flex;
+      gap: 24px;
+      transition: transform 0.4s ease;
+    }
+
+    .review-card {
+      background: var(--navy-2);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 28px;
+      width: calc(33.333% - 16px);
+      min-width: calc(33.333% - 16px);
+      flex-shrink: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .review-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #4285f4;
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .review-name {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--white);
+    }
+
+    .review-meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .review-stars {
+      color: var(--yellow);
+      font-size: 14px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .review-text {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--muted);
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .reviews-prev, .reviews-next {
+      background: var(--navy-2);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--white);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 22px;
+      cursor: pointer;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .reviews-prev:hover, .reviews-next:hover { background: var(--navy-3); }
+
+    @media (max-width: 768px) {
+      .review-card { min-width: 85%; }
+    }
+
     #why { background: var(--navy-2); }
 
     .why-grid {
@@ -938,6 +1042,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#why">Why Us</a></li>
+      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="tel:3235550187" class="nav-phone">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -954,6 +1059,7 @@
     <a href="#services">Services</a>
     <a href="#pricing">Pricing</a>
     <a href="#why">Why Us</a>
+    <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
     <a href="tel:3235550187" class="drawer-cta">📞 Call (323) 555-0187</a>
   </div>
@@ -1033,10 +1139,7 @@
               <div class="about-stat-num">25+</div>
               <div class="about-stat-label">Years in Silver Lake</div>
             </div>
-            <div>
-              <div class="about-stat-num">300+</div>
-              <div class="about-stat-label">5-Star Reviews</div>
-            </div>
+
             <div>
               <div class="about-stat-num">24/7</div>
               <div class="about-stat-label">Always Available</div>
@@ -1244,6 +1347,102 @@
     </div>
   </section>
 
+  <!-- REVIEWS -->
+  <section id="reviews" style="background: var(--navy); padding: 100px 24px;">
+    <div class="section-inner">
+      <div style="text-align:center; margin-bottom:48px;">
+        <span class="section-label">Reviews</span>
+        <h2 class="section-title">What Customers Are Saying</h2>
+        <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-top:12px;">
+          <svg width="100" height="20" viewBox="0 0 100 20"><polygon points="10,1 12.9,7.6 20,8.6 15,13.4 16.2,20 10,16.9 3.8,20 5,13.4 0,8.6 7.1,7.6" fill="#f5c518"/><polygon points="30,1 32.9,7.6 40,8.6 35,13.4 36.2,20 30,16.9 23.8,20 25,13.4 20,8.6 27.1,7.6" fill="#f5c518"/><polygon points="50,1 52.9,7.6 60,8.6 55,13.4 56.2,20 50,16.9 43.8,20 45,13.4 40,8.6 47.1,7.6" fill="#f5c518"/><polygon points="70,1 72.9,7.6 80,8.6 75,13.4 76.2,20 70,16.9 63.8,20 65,13.4 60,8.6 67.1,7.6" fill="#f5c518"/><polygon points="90,1 92.9,7.6 100,8.6 95,13.4 96.2,20 90,16.9 83.8,20 85,13.4 80,8.6 87.1,7.6" fill="#f5c518"/></svg>
+          <span style="color:var(--white); font-size:15px; font-family:'Nunito',sans-serif;">4.9 · 47 Google Reviews</span>
+        </div>
+      </div>
+
+      <div class="reviews-carousel">
+        <button class="reviews-prev" id="reviewsPrev">‹</button>
+        <div class="reviews-track-wrap">
+          <div class="reviews-track" id="reviewsTrack">
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="review-avatar">J</div>
+                <div>
+                  <div class="review-name">Jason M.</div>
+                  <div class="review-meta">2 weeks ago · <img src="https://www.google.com/favicon.ico" width="12" height="12" style="vertical-align:middle;"> Google</div>
+                </div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">"Called Miguel at 11pm after locking myself out. He was at my door in 20 minutes, had me inside in 5. Incredibly professional and didn't charge an arm and a leg. Will absolutely call again."</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="review-avatar" style="background:#34a853;">A</div>
+                <div>
+                  <div class="review-name">Amanda T.</div>
+                  <div class="review-meta">1 month ago · <img src="https://www.google.com/favicon.ico" width="12" height="12" style="vertical-align:middle;"> Google</div>
+                </div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">"I've used Silver Lake Lock & Key twice now — once for a lockout and once to rekey my whole apartment after moving in. Both times Miguel was on time, fast, and super fair on price. He's my locksmith for life."</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="review-avatar" style="background:#ea4335;">R</div>
+                <div>
+                  <div class="review-name">Ray C.</div>
+                  <div class="review-meta">3 months ago · <img src="https://www.google.com/favicon.ico" width="12" height="12" style="vertical-align:middle;"> Google</div>
+                </div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">"Needed a new deadbolt installed same day and Miguel made it happen. Showed up when he said he would, explained everything clearly, and the work was clean. Rare to find someone this reliable."</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="review-avatar" style="background:#fbbc05;">D</div>
+                <div>
+                  <div class="review-name">Diana R.</div>
+                  <div class="review-meta">5 months ago · <img src="https://www.google.com/favicon.ico" width="12" height="12" style="vertical-align:middle;"> Google</div>
+                </div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">"Car key wouldn't turn in the ignition at 7am before work. Called Silver Lake Lock & Key and they were there within 30 minutes. Fixed on the spot, reasonable price. Couldn't have asked for better service."</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="review-avatar" style="background:#4285f4;">M</div>
+                <div>
+                  <div class="review-name">Marcus L.</div>
+                  <div class="review-meta">6 months ago · <img src="https://www.google.com/favicon.ico" width="12" height="12" style="vertical-align:middle;"> Google</div>
+                </div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">"Just bought a house and wanted all the locks rekeyed before we moved in. Miguel came out, walked me through everything, and had it all done in under an hour. Super knowledgeable and honest about what we actually needed."</p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-header">
+                <div class="review-avatar" style="background:#34a853;">S</div>
+                <div>
+                  <div class="review-name">Sofia P.</div>
+                  <div class="review-meta">8 months ago · <img src="https://www.google.com/favicon.ico" width="12" height="12" style="vertical-align:middle;"> Google</div>
+                </div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">"My roommate moved out and changed the locks out of spite. Miguel had me back in within the hour and installed a new deadbolt while he was at it. Lifesaver doesn't even cover it. This is the only locksmith I'm ever calling."</p>
+            </div>
+
+          </div>
+        </div>
+        <button class="reviews-next" id="reviewsNext">›</button>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA BANNER -->
   <div class="cta-banner">
     <h2>Locked Out Right Now?</h2>
@@ -1317,6 +1516,49 @@
         hamburger.classList.remove('open');
         mobileDrawer.classList.remove('open');
       });
+    });
+
+    // Reviews carousel — infinite loop
+    const track = document.getElementById('reviewsTrack');
+    const origCards = Array.from(track.querySelectorAll('.review-card'));
+    const VISIBLE = 3;
+
+    // Clone all cards and append for seamless looping
+    origCards.forEach(c => track.appendChild(c.cloneNode(true)));
+
+    let reviewIndex = 0;
+    let isTransitioning = false;
+    const total = origCards.length; // 6 real cards
+
+    function cardWidth() {
+      return origCards[0].offsetWidth + 24;
+    }
+
+    function goTo(idx, animate) {
+      track.style.transition = animate ? 'transform 0.4s ease' : 'none';
+      track.style.transform = `translateX(-${idx * cardWidth()}px)`;
+      reviewIndex = idx;
+    }
+
+    track.addEventListener('transitionend', () => {
+      // When we've scrolled into the cloned zone, silently jump back
+      if (reviewIndex >= total) {
+        goTo(reviewIndex - total, false);
+      } else if (reviewIndex < 0) {
+        goTo(reviewIndex + total, false);
+      }
+      isTransitioning = false;
+    });
+
+    document.getElementById('reviewsPrev').addEventListener('click', () => {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      goTo(reviewIndex - 1, true);
+    });
+    document.getElementById('reviewsNext').addEventListener('click', () => {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      goTo(reviewIndex + 1, true);
     });
   </script>
 
